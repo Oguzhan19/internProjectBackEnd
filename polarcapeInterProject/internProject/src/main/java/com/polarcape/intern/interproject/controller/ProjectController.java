@@ -35,8 +35,8 @@ public class ProjectController {
     }
  
     @RequestMapping(value = "/newProject", method = RequestMethod.POST)
-    public void addProject(@RequestBody Project project) {
-        projectService.addProject(project);
+    public Project addProject(@RequestBody Project project) {
+       return projectService.addProject(project);
     }
  
 
@@ -49,11 +49,9 @@ public class ProjectController {
     
     
     @RequestMapping(value = "/updateProject", method = RequestMethod.PUT)
-    public void updateProject(@RequestParam("id") Long id) {
-            Project project;
-            project= projectService.getProject(id);
-            project.setPname("atkafasi");
-            projectRepository.save(project);
+    public Project updateProject(Project project) {
+           
+          return  projectRepository.save(project);
         
     }
 }

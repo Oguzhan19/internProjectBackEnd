@@ -6,7 +6,7 @@ import com.polarcape.intern.interproject.model.Assignment;
 
 public interface AssignmentService {
 
-    public void addAssignment(Assignment assignment);
+    public Assignment addAssignment(Assignment assignment);
 
     public List<Assignment> getAllAssignments();
 
@@ -14,5 +14,5 @@ public interface AssignmentService {
 
     public Assignment getAssignment(Long id);
 
-    public void updateAssignment(Assignment assignment);
+    public Assignment updateAssignment(Assignment assignment);
 }

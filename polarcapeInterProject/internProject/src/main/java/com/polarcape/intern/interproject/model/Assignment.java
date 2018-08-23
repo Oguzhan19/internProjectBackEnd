@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotNull;
 
 @Entity
 //@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, scope = Assignment.class)
@@ -22,16 +23,16 @@ public class Assignment implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    //   @NotNull
+    @NotNull
     private String name;
 
-    //  @NotNull
+    @NotNull
     private String startDate;
 
-    //  @NotNull
+    @NotNull
     private String duration;
 
-    //  @NotNull
+    @NotNull
     private String Capacity;
 
     @JsonIgnore

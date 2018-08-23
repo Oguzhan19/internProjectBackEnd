@@ -9,6 +9,7 @@
 /Users/polarcape/Desktop/polarcapeInterProject/internProject/src/main/java/com/polarcape/intern/interproject/controller/AssignmentController.java
 /Users/polarcape/Desktop/polarcapeInterProject/internProject/src/main/java/com/polarcape/intern/interproject/repository/AssignmentRepository.java
 /Users/polarcape/Desktop/polarcapeInterProject/internProject/src/main/java/com/polarcape/intern/interproject/service/AssignmentService.java
+/Users/polarcape/Desktop/polarcapeInterProject/internProject/src/main/java/com/polarcape/intern/interproject/config/RestConfig.java
 /Users/polarcape/Desktop/polarcapeInterProject/internProject/src/main/java/com/polarcape/intern/interproject/serviceImpl/EmployeeServiceImpl.java
 /Users/polarcape/Desktop/polarcapeInterProject/internProject/src/main/java/com/polarcape/intern/interproject/controller/EmployeeController.java
 /Users/polarcape/Desktop/polarcapeInterProject/internProject/src/main/java/com/polarcape/intern/interproject/service/ProjectService.java

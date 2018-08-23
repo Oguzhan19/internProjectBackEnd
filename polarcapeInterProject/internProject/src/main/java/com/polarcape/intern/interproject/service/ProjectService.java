@@ -5,7 +5,7 @@ import com.polarcape.intern.interproject.model.Project;
 
 public interface ProjectService {
 
-    public void addProject(Project project);
+    public Project addProject(Project project);
 
     public List<Project> getAllProjects();
 
@@ -13,6 +13,6 @@ public interface ProjectService {
 
     public Project getProject(Long id);
 
-    public void updateProject(Project project);
+    public Project updateProject(Project project);
 
 }

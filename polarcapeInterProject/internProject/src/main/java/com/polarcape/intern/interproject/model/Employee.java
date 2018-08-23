@@ -6,12 +6,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 
 @Entity
 //@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, scope = Assignment.class)
@@ -21,19 +23,45 @@ public class Employee implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long empID;
 
-    //@NotNull
+    @NotNull
     private String name;
 
-    //@Column(unique = true)
-    //@NotNull
+    @Column(unique = true)
+    @NotNull
     private String email;
 
-    //@NotNull
+    @NotNull
+    private String password;
+    
+    @NotNull
+    private Long empType;
+    
+    @NotNull
     private String status;
-
+    
     @JsonIgnore
     @OneToMany(mappedBy = "employee", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private List<Assignment> assignment;
+
+    public Long getEmpType() {
+        return empType;
+    }
+
+    public void setEmpType(Long empType) {
+        this.empType = empType;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    
+
+    
 
     public Long getEmpID() {
         return empID;

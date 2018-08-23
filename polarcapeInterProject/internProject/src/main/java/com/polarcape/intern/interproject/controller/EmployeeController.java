@@ -33,8 +33,8 @@ public class EmployeeController {
     }
 
     @RequestMapping(value = "/newEmployee", method = RequestMethod.POST)
-    public void addEmployee(@RequestBody Employee employee) {
-        employeeService.addEmployee(employee);
+    public Employee addEmployee(@RequestBody Employee employee) {
+        return employeeService.addEmployee(employee);
     }
 
     @RequestMapping(value = "/deleteEmployee", method = RequestMethod.DELETE)
@@ -44,12 +44,8 @@ public class EmployeeController {
     }
 
     @RequestMapping(value = "/updateEmployee", method = RequestMethod.PUT)
-    public void updateEmployee(@RequestParam("id") Long id) {
-
-        Employee employee;
-        employee = employeeService.getEmployee(id);
-        employee.setEmail("atkafasi");
-        employeeRepository.save(employee);
+    public Employee updateEmployee( Employee employee) {
+      return  employeeRepository.save(employee);
 
     }
 }

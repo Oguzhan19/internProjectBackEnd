@@ -1,9 +1,6 @@
 package com.polarcape.intern.interproject.model;
 
-//import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-//import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-//import java.io.Serializable;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -12,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 
 @Entity
 //@JsonIdentityInfo(generator = ObjectIdGenerators.IntSequenceGenerator.class, scope = Assignment.class)
@@ -22,16 +20,16 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // @NotNull
+    @NotNull
     private String pname;
 
-    //@NotNull
+    @NotNull
     private String client;
 
-    //@NotNull
+    @NotNull
     private String maxcapacity;
 
-    //@NotNull
+    @NotNull
     private String status;
 
     @JsonIgnore

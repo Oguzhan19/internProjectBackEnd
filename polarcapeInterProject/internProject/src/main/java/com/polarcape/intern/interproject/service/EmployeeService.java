@@ -6,7 +6,7 @@ import com.polarcape.intern.interproject.model.Employee;
 
 public interface EmployeeService {
 
-    public void addEmployee(Employee employee);
+    public Employee addEmployee(Employee employee);
 
     public List<Employee> getAllEmployees();
 
@@ -14,5 +14,5 @@ public interface EmployeeService {
 
     public Employee getEmployee(Long empID);
 
-    public void updateEmployee(Employee employee);
+    public Employee updateEmployee(Employee employee);
 }

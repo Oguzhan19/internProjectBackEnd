@@ -26,8 +26,8 @@ public class AssignmentController {
     }
 
     @RequestMapping(value = "/newAssignment", method = RequestMethod.POST)
-    public void addAssignment(@RequestBody Assignment assignment) {
-        assignmentService.addAssignment(assignment);
+    public Assignment addAssignment(@RequestBody Assignment assignment) {
+        return assignmentService.addAssignment(assignment);
     }
 
     @RequestMapping(value = "/deleteAssignment", method = RequestMethod.DELETE)
@@ -43,12 +43,10 @@ public class AssignmentController {
     }
 
     @RequestMapping(value = "/updateAssignment", method = RequestMethod.PUT)
-    public void updateAssignment(@RequestParam("id") Long id) {
+    public Assignment updateAssignment(Assignment assignment) {
 
-        Assignment assignment;
-        assignment = assignmentService.getAssignment(id);
-        assignment.setName("istanbul");
-        assignmentRepository.save(assignment);
+      
+        return assignmentRepository.save(assignment);
 
     }
 

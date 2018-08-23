@@ -1,4 +1,5 @@
 com/polarcape/intern/interproject/serviceImpl/AssignmentServiceImpl.class
+com/polarcape/intern/interproject/config/RestConfig.class
 com/polarcape/intern/interproject/repository/AssignmentRepository.class
 com/polarcape/intern/interproject/controller/ProjectController.class
 com/polarcape/intern/interproject/service/ProjectService.class
